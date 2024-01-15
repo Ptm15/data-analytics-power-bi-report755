@@ -1,7 +1,7 @@
-# Data Analytics Power Bi Report
+# Project Name
 
 ## Overview
-
+Brief description of the project and its goals.
 
 ## Milestone Achievements
 
@@ -49,6 +49,20 @@
 2. **Column Renaming:**
    - Renamed columns for consistency and clarity in alignment with Power BI naming conventions.
 
+3. **Hierarchies and Calculated Columns:**
+   - Created a date hierarchy with levels: Start of Year, Start of Quarter, Start of Month, Start of Week, Date.
+   - Created a calculated column called `Country` in the Stores table for a full country name based on the `Stores[Country Code]` column.
+   - Created a calculated column called `Geography` in the Stores table for a full geography name based on `Stores[Country Region]` and `Stores[Country]` columns, separated by a comma and a space.
+
+4. **Data Category Assignment:**
+   - Ensured the correct data category is assigned for specific columns:
+     - World Region: Continent
+     - Country: Country
+     - Country Region: State or Province.
+
+5. **Geography Hierarchy:**
+   - Created a geography hierarchy with levels: World Region, Country, Country Region.
+
 ### Customers Table
 1. **Importing Data from CSVs:**
    - Downloaded and unzipped the `Customers.zip` file.
@@ -57,11 +71,9 @@
 2. **Data Transformation:**
    - Created a Full Name column by combining `[First Name]` and `[Last Name]` columns.
    - Deleted unused columns (e.g., index columns).
-   
+
 3. **Column Renaming:**
    - Renamed columns for consistency and clarity in alignment with Power BI naming conventions.
 
 
-
-## Acknowledgments
 
