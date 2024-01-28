@@ -1,79 +1,78 @@
-# Data Analytics in Power Bi Report
+# Data Analytics in Power BI Report
+
+This repository contains a Power BI project aimed at providing actionable insights for informed decision-making through data analytics. The project involves importing and transforming data from various sources to create visualisations and reports.
 
 ## Overview
-Brief description of the project and its goals.
 
-## Milestone Achievements
+The project utilises Power BI to analyse and visualise data, enabling stakeholders to make informed decisions based on insights derived from the data. The report covers multiple aspects of a business operation, including sales, product performance, customer behaviour, and geographical analysis.
 
-### Orders Table
-1. **Importing Data from Azure SQL Database:**
-   - Connected to Azure SQL Database using the given credentials.
-   - Imported the `orders_powerbi` table into Power BI.
+## Milestones
 
-2. **Data Privacy in Power Query Editor:**
-   - Deleted the column named `[Card Number]` in Power Query Editor to ensure data privacy.
+### Milestone 1 & 2: Setting up Development Environment
 
-3. **Column Splitting:**
-   - Separated `[Order Date]` and `[Shipping Date]` columns into date and time components.
+For Mac or Linux user without native access to Power BI, follow these steps to set up a Windows Virtual Machine (VM) on Azure:
 
-4. **Data Integrity:**
-   - Filtered out and removed rows with missing or null values in the `[Order Date]` column.
+- **Create an Azure Account:** Create an Azure account and set up a free account if necessary.
+- **Provision a Windows VM:** Provision a Windows VM (size D2s_v3) on Azure, utilising the £200 free credit from the Azure free trial.
+- **Connect to Azure VM:** Connect to the Azure VM using Remote Desktop Protocol (RDP).
+- **Install Power BI Desktop:** Download and install Power BI Desktop for Windows from the official Microsoft website.
+- **Transform Data:** Connect to the Azure database and transform tables using Power BI Query Editor.
 
-5. **Column Renaming:**
-   - Renamed columns in the dataset for consistency and clarity in alignment with Power BI naming conventions.
+### Milestone 3: Establishing Data Model
 
-### Products Table
-1. **Importing Data from CSV:**
-   - Downloaded the `Products.csv` file.
-   - Used Power BI's Get Data option to import the file into the project.
+Created relationships between tables to form a star schema model, ensuring correct settings and activating relationships as necessary. Additionally, created a separate table named "Measures Table" in the data model view using Power Query Editor.
 
-2. **Data Cleaning and Transformation:**
-   - Removed duplicates in the `product_code` column to ensure uniqueness.
-   - Used Column From Examples to generate new columns for weight values and units.
-   - Replaced blank entries in the units column with "kg".
-   - Converted the data type of the values column to decimal number.
-   - Handled errors during conversion by replacing them with the number 1.
-   - Created a calculated column to convert non-kg units to kilograms.
+### Milestone 4, 5, 6, 7, 8, 9: Creating Report Pages
 
-3. **Column Deletion:**
-   - Deleted unnecessary columns in Power Query Editor.
+Design various report pages to visualise insights:
 
-4. **Column Renaming:**
-   - Renamed columns for consistency and clarity in alignment with Power BI naming conventions.
+#### Customer Detail Page
 
-### Stores Table
-1. **Importing Data from Azure Blob Storage:**
-   - Connected to Azure Blob Storage using the given credentials.
-   - Imported the `Stores` table into Power BI.
+- **Card Visuals:** Display distinct customers and revenue per customer.
+- **Line Chart:** Visualise weekly distinct customers.
+- **Donut Chart:** Illustrate the number of customers by country.
+- **Top Customer Visual:** Highlight top customers based on specific criteria.
 
-2. **Column Renaming:**
-   - Renamed columns for consistency and clarity in alignment with Power BI naming conventions.
+#### Executive Summary Page
 
-3. **Hierarchies and Calculated Columns:**
-   - Created a date hierarchy with levels: Start of Year, Start of Quarter, Start of Month, Start of Week, Date.
-   - Created a calculated column called `Country` in the Stores table for a full country name based on the `Stores[Country Code]` column.
-   - Created a calculated column called `Geography` in the Stores table for a full geography name based on `Stores[Country Region]` and `Stores[Country]` columns, separated by a comma and a space.
+- **Card Visuals:** Provide total revenue, total profit, and total orders.
+- **Graph:** Present revenue against time.
+- **Bar Chart:** Showcase orders against category.
+- **KPI Visuals:** Display key performance indicators.
+- **Table:** List top 10 products.
 
-4. **Data Category Assignment:**
-   - Ensured the correct data category is assigned for specific columns:
-     - World Region: Continent
-     - Country: Country
-     - Country Region: State or Province.
+#### Product Detail Page
 
-5. **Geography Hierarchy:**
-   - Created a geography hierarchy with levels: World Region, Country, Country Region.
+- **Gauge Visuals:** Show selected product categories' revenue, profit, and number of orders against quarterly targets.
+- **Area Chart:** Display relative revenue performance of each category over time.
+- **Table:** List top 10 products by revenue.
+- **Scatter Graph:** Show quantity ordered against profit per item for products in the current context.
 
-### Customers Table
-1. **Importing Data from CSVs:**
-   - Downloaded and unzipped the `Customers.zip` file.
-   - Used Power BI's Get Data option with Folder data connector to import the Customers folder.
+#### Stores Map Page
 
-2. **Data Transformation:**
-   - Created a Full Name column by combining `[First Name]` and `[Last Name]` columns.
-   - Deleted unused columns (e.g., index columns).
+- **Map Visual:** Illustrate the most profitable stores.
 
-3. **Column Renaming:**
-   - Renamed columns for consistency and clarity in alignment with Power BI naming conventions.
+#### Cross Filtering and Navigation Page
 
+- **Page for Cross-Filtering:** Implement cross-filtering and navigation within the report.
+
+### Milestone 10: Creating Metrics for External Users
+
+Connect to the Azure database via SQL in Visual Studio Code to query the database and create metrics for users outside the company.
+
+## Usage
+
+1. **Clone the Repository:** Clone the repository to your local machine.
+2. **Open Power BI Project:** Open the Power BI project file (.pbix) using Power BI Desktop.
+3. **Explore Reports:** Explore the different report pages and interact with the visuals to gain insights.
+4. **Customise the Report:** Customise the report as needed for specific business requirements.
+
+## Contributors
+
+- Phoebe M
+
+## License
+
+This project is licensed under the MIT License.
 
 
