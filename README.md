@@ -60,6 +60,32 @@ Design various report pages to visualise insights:
 
 Connect to the Azure database via SQL in Visual Studio Code to query the database and create metrics for users outside the company.
 
+Answered 5 questions from project milsetone using SQL querys
+
+Examples:
+
+```sql
+-- How many staff are there in all of the UK stores? 
+
+SELECT SUM(staff_numbers) AS total_staff_uk
+FROM dim_store
+WHERE country_code = 'GB';
+```
+```sql
+-- Which German store type had the highest revenue for 2022? 
+
+SELECT store_type AS german_store_type,
+       SUM(sale_price) AS total_revenue
+FROM forquerying2
+WHERE country = 'Germany'  
+      AND EXTRACT(YEAR FROM dates::timestamp) = 2022  
+GROUP BY store_type
+ORDER BY total_revenue DESC
+LIMIT 1;
+
+```
+
+
 ## Usage
 
 1. **Clone the Repository:** Clone the repository to your local machine.
