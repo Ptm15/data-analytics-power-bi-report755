@@ -18,11 +18,15 @@ For Mac or Linux user without native access to Power BI, follow these steps to s
 - **Install Power BI Desktop:** Download and install Power BI Desktop for Windows from the official Microsoft website.
 - **Transform Data:** Connect to the Azure database and transform tables using Power BI Query Editor.
 
+Example of DAX Formula used to create a measure which shows the top customer by the revenue they generated:
+
+<img src="Topcustomer.png">
+
 ### Milestone 3: Establishing Data Model
 
 Created relationships between tables to form a star schema model, ensuring correct settings and activating relationships as necessary. Additionally, created a separate table named "Measures Table" in the data model view using Power Query Editor.
 
-<img src="Topcustomer.png">
+<img src="ssmodel.png">
 
 
 ### Milestone 4, 5, 6, 7, 8, 9: Creating Report Pages
@@ -43,6 +47,8 @@ Design various report pages to visualise insights:
 - **Bar Chart:** Showcase orders against category.
 - **KPI Visuals:** Display key performance indicators.
 - **Table:** List top 10 products.
+
+<img src="Esummary.png">
 
 #### Product Detail Page
 
