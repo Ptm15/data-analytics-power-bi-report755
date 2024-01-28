@@ -22,6 +22,9 @@ For Mac or Linux user without native access to Power BI, follow these steps to s
 
 Created relationships between tables to form a star schema model, ensuring correct settings and activating relationships as necessary. Additionally, created a separate table named "Measures Table" in the data model view using Power Query Editor.
 
+<img src-"Topcustomer.png">
+
+
 ### Milestone 4, 5, 6, 7, 8, 9: Creating Report Pages
 
 Design various report pages to visualise insights:
